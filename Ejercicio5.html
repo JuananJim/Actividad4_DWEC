@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Determinar si un Número es Primo-->
+
+    <div id="container"></div>
+    <script>
+        let insertar = document.getElementById("container");
+        let num=parseInt(prompt("Dime un número y te diré si es primo o no"));
+
+        if(num%2==0){//Si el número es divisible por un par y el resto es 0 no es primo
+            insertar.innerHTML=` ${num} no es primo.`;
+
+        }
+
+        else if(num%num==0 && num%1==0){//Si solo es divisible entre el mismo y uno es primo
+            insertar.innerHTML=` ${num} es primo.`;
+        }
+
+    </script>
+    
+</body>
+</html>

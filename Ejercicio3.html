@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Calcular el Factorial de un Número-->
+
+    <div id="factorial"></div>
+
+    <script>
+        let insertar=document.getElementById("factorial");
+        let numero = parseInt(prompt("Introduce un número:"));//Lo usamos para introducir un numero en la pagina web 
+        let factorial = 1;//Declaramos fuera el factorial
+
+
+        for (let i = 1; i <=numero; i++){//Recorremos con un for 
+            
+            factorial *=i;
+            
+        }
+
+        insertar.innerHTML += `El factorial de ${numero} es: ${factorial}<br>`;
+
+
+    </script>
+</body>
+</html>
