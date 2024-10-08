@@ -11,28 +11,24 @@
 
     <script>
         let insertar=document.getElementById("container");
-        let numinsertado = parseInt(prompt("Dime un número del 1 al 5"));
+        let numinsertado;
         let numeroAleatorio = Math.floor(Math.random() * 5) + 1;
 
         do{
 
+             numinsertado = parseInt(prompt("Dime un número del 1 al 5"));//Pides el número al usuario siempre, por eso lo ponemos dentro
 
-             if(numinsertado<1 || numinsertado>5){
-                alert("Tienes que introducir un número válido.");
-             }
+            if (numinsertado < 1 || numinsertado > 5) {//Aseguras el numero entre 1 y 5
+            alert("Tienes que introducir un número válido entre 1 y 5.");
 
-             else if (numinsertado != numeroAleatorio) {
-            parseInt(prompt("No has acertado el número, prueba de nuevo."));  
-            
+        } else if (numinsertado != numeroAleatorio) {//SI el numero que has introducido no es el mismo que el aleatorio no vale
+            alert("No has acertado el número, prueba de nuevo.");
+        }
 
-            }
-            
+    } while (numinsertado != numeroAleatorio);//Mientras el numero insertado sea distinto a numero aleatorio
 
-            
+    alert("¡Has acertado! El número aleatorio era: " + numeroAleatorio);
 
-        }while (numinsertado != numeroAleatorio);
-
-            alert("Has acertado! El número aleatorio era: " + numeroAleatorio);
 
         
 
