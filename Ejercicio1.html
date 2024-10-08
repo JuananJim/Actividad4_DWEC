@@ -6,16 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-
+<!--Generar una Pirámide de Asteriscos-->
     <div id="piramide"></div>
     <script>
         let piramide=document.getElementById("piramide");
         let niveles=5;
 
-        for(let i=0; i<niveles; i++){
-            let espacios= ' '.repeat(niveles-i-1);
-            let asteriscos= '*'.repeat(2*i+1);
-            piramide.innerHTML += `${espacios}${asteriscos}<br>`;
+        for(let i=0; i<niveles; i++){//Realizamos un for para establecer los niveles
+            let espacios= ' '.repeat(niveles-i-1);//Se insertan los espacios cuando el nivel de la piramide sube, por ello indicamos que cuando el nivel sube, se añade un espacio
+            let asteriscos= '*'.repeat(2*i+1);//Se insertan los asteriscos para formar la piramide y se asegura que siempre sean impares para formar dicha piramide.
+            piramide.innerHTML += `${espacios}${asteriscos}<br>`;//Se rellena la piramide con la concatenación
         }
     </script>
 </body>

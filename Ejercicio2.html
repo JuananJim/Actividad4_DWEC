@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!--Números del 1 al 100 con Reglas Especiales--> 
+
+   <div id="numeros"></div>
+    <script>
+        let numerosref=document.getElementById("numeros");
+        let numeroscien=101;
+
+        for(let i=0; i<numeroscien; i++) {//Usamos for para introducir todas las posiciones
+
+    if(i % 4 == 0 && i % 7 == 0) { //Introducimos la condición de que tiene que ser multiplo de 4 y 7 a la vez
+        numerosref.innerHTML += `${i} - FullStack <br>`;
+        
+    } 
+    
+    else if (i % 4 == 0) {//Condicion si solo es multiplo de 4
+        numerosref.innerHTML += `${i} - FrontEnd <br>`;
+
+    } 
+    
+    else if (i % 7 == 0) {//Condicion si solo es multiplo de 7
+        numerosref.innerHTML += `${i} - BackEnd <br>`;
+
+
+    } else {//Si no se da ninguna condicion no se le aplica nada
+        numerosref.innerHTML += `${i} <br>`;
+    }
+}
+
+
+        
+    </script>
+</body>
+</html>
