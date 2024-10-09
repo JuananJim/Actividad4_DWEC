@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Reemplazar Palabras en una Frase-->
+
+    <div id="container"></div>
+
+    <script>
+        let insertar=document.getElementById("container");
+        let frase=prompt("Escribe lo que quieras.");//Escribe una frase cualquiera
+        let palabraCambiar=prompt("Escribe la palabra que quieras cambiar en la frase anterior.");//Escribe la palabra que quieras cambiar de la frase anterior
+        let palabraNueva=prompt("Escribe la palabra a introducir");//Palabra que quieras introducir nueva
+
+        let fraseModificada = frase.replace(palabraCambiar,palabraNueva);//Usamos un replace para intercambiar las palabras
+
+        alert("La frase nueva es: "+fraseModificada);//La mostramos
+
+    </script>
+</body>
+</html>

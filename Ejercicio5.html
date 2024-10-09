@@ -12,14 +12,28 @@
     <script>
         let insertar = document.getElementById("container");
         let num=parseInt(prompt("Dime un número y te diré si es primo o no"));
+        let esPrimo = true;
 
-        if(num%2==0){//Si el número es divisible por un par y el resto es 0 no es primo
-            insertar.innerHTML=` ${num} no es primo.`;
+        if (num <= 1) {
+            esPrimo = false;
+        } 
+        else {
+        
+           
+            for (let i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    esPrimo = false;
+                    
+                }
+            }
 
-        }
-
-        else if(num%num==0 && num%1==0){//Si solo es divisible entre el mismo y uno es primo
-            insertar.innerHTML=` ${num} es primo.`;
+            if (esPrimo) {
+                alert( num+" es primo");
+            } 
+            
+            else {
+                alert(num+" no es primo");
+            }
         }
 
     </script>

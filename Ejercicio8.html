@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--Contar el Número de Vocales en un Texto-->
+
+    <div id="container"></div>
+
+    <script>
+        let insertar=document.getElementById("container");
+        let texto=prompt("Escribe lo que quieras:");
+        let vocales="aeiouáéíóúAEIOUÁÉÍÓÚ";//Indicamos las vocales que queremos que detecte
+        let contador=0;//Ponemos un contador a 0
+
+        for(let i=0; i<texto.length; i++){//for para recorrer el texto
+            
+            if(vocales.includes(texto[i])){//Si las vocales están incluidas en la iteración del texto cuentas cuantas son.
+                contador++;
+
+            }
+                
+            }
+
+            alert("Número de vocales: " + contador);//Mostramos por un alert, abajo tenemos comentado
+            //insertar.innerHTML = `Número de vocales: ${contador}`;//Mostramos el resultado
+    </script>
+</body>
+</html>

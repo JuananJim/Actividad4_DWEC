@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!--Comprobar si un Número es de Armstrong-->
+
+     <div id="container"></div>
+
+     <script>
+        let insertar=document.getElementById("container");
+        let numStr;//Declaramos las variables fuera para que lo coja nuestro do
+        let num;
+        let sumaCubos;
+        
+        do{//Hacemos un do while para que se ejeute constantemente
+
+         num=parseInt(prompt("Dime un número de 3 cifras:"));
+        
+         numStr=num.toString();//Pasamos el número a String para separarlo.
+
+
+         if(numStr.length!=3){//Si el tamaño del string es menor que 3 te pide que metas un número de 3 cifras
+            alert("Debes introducir un número de 3 cifras.");
+         }
+        
+             sumaCubos = numStr.split('').reduce((suma, digito) => {//Split divide la cadena, así separamos los números. Reduce itera sobre cada digito, transformandolo en una especie de array.
+                return suma + Math.pow(Number(digito), 3);//Math.pow calcula el cubo del digito pasandolo a numero y suma el cubo al total acumulado
+            }, 0);//Inicializa al 0 el acumulador
+            
+            if (sumaCubos==num){//Si la suma de los cubos es igual al número introducido es un número armstrong
+                insertar.innerHTML=` ${num} es un número de Armstrong.`;
+                break; //Rompemos el bucle
+            }
+
+            else{//Si no, lo mostramos y continuamos el bucle
+                alert("No es un número Armstrong, prueba de nuevo");
+            }
+
+        
+        }while(true);//El true es para generar un bucle infinito, al que pararemos cuando lo forcemos
+
+        
+     </script>
+    
+</body>
+</html>
